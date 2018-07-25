@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBlack"
+    android:padding="25dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:lines="2"
+                android:text="Always on display"
+                android:textColor="@color/colorYellow"
+                android:textSize="40dp"
+                android:textStyle="bold|italic"
+                android:typeface="serif" />
+
+            <ImageView
+                android:id="@+id/iv_gift"
+                android:layout_width="35dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="60dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/gift_app" />
+
+            <ImageView
+                android:id="@+id/iv_on_off"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/tv_name"
+
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/on_off_list" />
+
+            <Switch
+                android:id="@+id/sw_double_tap"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/iv_on_off"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rounded_line"
+                android:padding="15dp"
+                android:text="Double tap"
+                android:textColor="@color/colorWhite"
+                android:textSize="23dp" />
+
+            <TableRow
+                android:id="@+id/tr_signature"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/sw_double_tap"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rounded_line"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/edt_set_signature"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:fontFamily="cursive"
+                    android:hint="Set signature"
+                    android:inputType="textPersonName"
+                    android:lines="1"
+                    android:padding="15dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="23dp" />
+
+                <Switch
+                    android:id="@+id/sw_signature"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="15dp" />
+
+            </TableRow>
+
+            <TextView
+                android:id="@+id/tv_about"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/tr_signature"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rounded_line"
+                android:padding="15dp"
+                android:text="About"
+                android:textColor="@color/colorWhite"
+                android:textSize="23dp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/iv_preview"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/preview" />
+
+</RelativeLayout>

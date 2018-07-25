@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack">
+
+    <TextClock
+        android:id="@+id/tc_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:fontFamily="serif"
+        android:textColor="@color/colorWhite"
+        android:textSize="70dp" />
+
+    <TextClock
+        android:id="@+id/tc_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tc_time"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="serif"
+        android:format12Hour="dd.MM.yy"
+        android:format24Hour="dd.MM.yy"
+        android:textColor="@color/colorWhite"
+        android:textSize="23dp" />
+
+    <TableRow
+        android:id="@+id/tr_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tc_date"
+        android:layout_margin="5dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imv_icon_battery"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/battery" />
+
+        <TextView
+            android:id="@+id/tv_battery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="23dp" />
+    </TableRow>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tr_pin"
+        android:layout_centerHorizontal="true">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_signature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rc_notification"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="cursive"
+        android:lines="1"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="30dp" />
+
+
+</RelativeLayout>
